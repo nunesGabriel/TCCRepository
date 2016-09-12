@@ -11,14 +11,17 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
+    <!-- Texto enunciado-->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:id="@+id/editText"
         android:layout_below="@+id/button2"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="42dp"
-        android:text="Escolha &quot;o gato&quot;" />
+        android:layout_marginStart="46dp"
+        android:text="Escolha &quot;o gato&quot;"
+        android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+        android:textSize="20dp" />
 
     <Button
         android:layout_width="100dp"
@@ -28,13 +31,13 @@
         android:layout_below="@+id/editText"
         android:layout_alignStart="@+id/editText" />
 
-    <ImageButton
+    <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/button4"
         android:background="@drawable/cachorro"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="44dp" />
+        android:layout_marginEnd="44dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

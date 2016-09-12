@@ -7,13 +7,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
-        android:debuggable="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="br.com.codetcc.MainActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>

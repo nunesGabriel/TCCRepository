@@ -6,19 +6,28 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aula 01"
+        android:text="Quiz"
         android:id="@+id/button"
-        android:onClick="layout1"
+        android:onClick="palavraImagem1"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bem-vindo"
+        android:text="Quiz de idiomas"
         android:id="@+id/textView"
         android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="139dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dicionário de pronúncia"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 </RelativeLayout>
