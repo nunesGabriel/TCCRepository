@@ -3,14 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quiz"
-        android:id="@+id/button"
-        android:onClick="palavraImagem1"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +18,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dicionário de pronúncia"
+        android:text="Quiz"
+        android:id="@+id/button"
+        android:onClick="temaSelect"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placar de pontuação"
         android:id="@+id/button4"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"

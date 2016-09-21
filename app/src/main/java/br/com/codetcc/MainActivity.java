@@ -18,22 +18,29 @@ import br.com.aulateste1e2.codetcc.R;
 * pegar evento do xml no java
 *  http://stackoverflow.com/questions/28452042/can-i-pass-a-parameter-from-a-layout-xml-to-a-method-in-the-mainactivity
 * setContentView dicas:
-* http://stackoverflow.com/questions/20471821/setcontentview-with-xml-layout-vs-view*/
+* http://stackoverflow.com/questions/20471821/setcontentview-with-xml-layout-vs-view
+* Como setar imagens aleatórias no ImageButton
+* http://pt.stackoverflow.com/questions/58919/como-setar-imagens-aleat%C3%B3rias-no-imagebutton*/
 
     public class MainActivity extends AppCompatActivity {
         //private static int gridview_column_width = 150; // In pixels
         private String text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
+
     }
 
-    public void palavraImagem1(View View){
-        setContentView(R.layout.palavraimagem1);
+    //Botoões de layout
+    public void temaSelect(View View){
+        setContentView(R.layout.temaselect);
+    }
+    public void exercicioAnimal(View View){
+        setContentView(R.layout.exercicioanimal);
     }
     public void retornaMain(View View){
         setContentView(R.layout.activity_main);
