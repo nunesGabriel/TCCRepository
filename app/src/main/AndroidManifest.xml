@@ -1,26 +1,79 @@
+<?xml version="1.1" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.aulateste1e2.codetcc">
+
     <uses-sdk android:minSdkVersion="21" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:icon="@mipmap/icon_quiz"
+        android:label="ThemeQuiz"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name="br.com.codetcc.MainActivity"
-            android:screenOrientation="portrait"
-            >
+            android:name="aplicativoIdiomas.View.MainActivity"
+            android:label="Theme Quiz"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="aplicativoIdiomas.View.TemaSelect"
+            android:label="@string/title_activity_tema_select"
+            android:parentActivityName="aplicativoIdiomas.View.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aplicativoIdiomas.View.MainActivity" />
+        </activity>
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalTexto1"
+            android:label="@string/title_activity_exercicio_texto"
+            android:parentActivityName="aplicativoIdiomas.View.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aplicativoIdiomas.View.MainActivity" />
+        </activity>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto2"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.PlacarDePontos"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.PontuacaoActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.FeedBackActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem1"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem2"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem3"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem4"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem5"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem6"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.FeedBackErrosAcertosActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem1"
+                  android:screenOrientation="portrait"/>
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem7"
+            android:label="@string/title_activity_exercicio_animal_imagem7"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem8"
+                  android:screenOrientation="portrait"/>
+
+
     </application>
 
-    </manifest>
+</manifest>

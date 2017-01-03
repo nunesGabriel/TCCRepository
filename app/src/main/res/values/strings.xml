@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">codeTCC</string>
+    <string name="btn_desiste">Quit</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="title_activity_tema_select">TemaSelect</string>
+    <string name="title_activity_exercicio_imagem">ExercicioImagem</string>
+    <string name="title_activity_exercicio_texto">ExercicioTexto</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_exercicio_animal_imagem6">ExercicioAnimalImagem6</string>
+    <string name="title_activity_exercicio_animal_imagem7">ExercicioAnimalImagem7</string>
 </resources>

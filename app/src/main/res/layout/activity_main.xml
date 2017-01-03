@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aplicativoIdiomas.View.MainActivity"
+    android:background="@drawable/background_lamps00">
 
-
-
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Quiz de idiomas"
-        android:id="@+id/textView"
-        android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="139dp" />
+        android:src="@drawable/title_theme_quiz"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/title_principal"
+        android:layout_above="@+id/tema"
+        android:layout_centerHorizontal="true" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz"
-        android:id="@+id/button"
-        android:onClick="temaSelect"
+        android:text="Iniciar quiz"
+        android:onClick="onClick"
+        android:id="@+id/tema"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_centerHorizontal="true"
+        />
+<!--
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Placar de pontuação"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button"
+        android:onClick="onClick"
+        android:id="@+id/placar"
+        android:layout_below="@+id/tema"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pontos feed"
+        android:id="@+id/btn_pontos_teste"
+        android:onClick="onClick"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/tema"
+        android:layout_alignStart="@+id/tema" />
+
+
+
 </RelativeLayout>
