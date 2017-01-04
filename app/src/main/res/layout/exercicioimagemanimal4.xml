@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="aplicativoIdiomas.View.ExercicioAnimalImagem4"
+    android:id="@+id/exercicioanimalimagem4"
+    android:background="@drawable/background_qst">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_desiste"
+        android:id="@+id/desiste"
+        android:onClick="retornaMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_notification_overlay"/>
+
+    <!-- Timer-->
+    <TextView
+        android:id="@+id/tvCountDownTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#f8fbfb"
+        android:gravity="center"
+        android:text="00:00" />
+
+    <!-- Enunciado da questão !-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/elephant"
+        android:id="@+id/questaoimg4"
+        android:layout_below="@+id/desiste"
+        android:layout_centerHorizontal="true" />
+
+    <!-- botões alternativas !-->
+    <Button
+        android:text="Dog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa5"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa6"
+        android:layout_alignStart="@+id/btnalternativa6" />
+
+    <Button
+        android:text="Elephant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa6"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa7"
+        android:layout_alignStart="@+id/btnalternativa7" />
+
+    <Button
+        android:text="Horse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa7"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa8"
+        android:layout_alignStart="@+id/btnalternativa8" />
+
+    <Button
+        android:text="Zebra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa8"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+
+</RelativeLayout>
+

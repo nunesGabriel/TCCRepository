@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/exercicioanimaltexto1"
+    tools:context="aplicativoIdiomas.View.ExercicioAnimalTexto2"
+    android:background="@drawable/background_qst">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_desiste"
+        android:id="@+id/desiste"
+        android:onClick="retornaMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_notification_overlay"/>
+
+    <!-- Timer-->
+    <TextView
+        android:id="@+id/tvCountDownTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#f8fbfb"
+        android:gravity="center"
+        android:text="00:00"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Texto enunciado-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:id="@+id/questao1"
+        android:layout_below="@+id/desiste"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:text="Choose the cat"
+        android:textSize="20dp"
+        android:textColor="#fefefe" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnimg1"
+        android:background="@drawable/cat"
+        android:onClick="onClick"
+        android:layout_below="@+id/questao1"
+        android:layout_alignStart="@+id/questao1" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnimg2"
+        android:background="@drawable/dog"
+        android:onClick="onClick"
+        android:layout_marginEnd="44dp"
+        android:layout_below="@+id/questao1"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnimg3"
+        android:background="@drawable/monkey"
+        android:onClick="onClick"
+        android:layout_marginTop="87dp"
+        android:layout_below="@+id/btnimg1"
+        android:layout_alignStart="@+id/btnimg1" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnimg4"
+        android:background="@drawable/zebra"
+        android:onClick="onClick"
+        android:layout_alignBottom="@+id/btnimg3"
+        android:layout_alignEnd="@+id/btnimg2"
+        android:layout_marginEnd="14dp" />
+
+
+</RelativeLayout>

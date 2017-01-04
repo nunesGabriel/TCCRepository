@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/exercicioanimalimagem1"
+    tools:context="aplicativoIdiomas.View.ExercicioAnimalImagem1"
+    android:background="@drawable/background_qst">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_desiste"
+        android:id="@+id/desiste"
+        android:onClick="retornaMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_notification_overlay" />
+
+    <!-- Timer-->
+    <TextView
+        android:id="@+id/tvCountDownTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#f8fbfb"
+        android:gravity="center"
+        android:text="00:00" />
+
+    <!-- Enunciado da questão !-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/dog"
+        android:id="@+id/questaoimg1"
+        android:layout_below="@+id/desiste"
+        android:layout_centerHorizontal="true" />
+
+    <!-- botões alternativas !-->
+    <Button
+        android:text="Dog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa1"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa2"
+        android:layout_alignStart="@+id/btnalternativa2" />
+
+    <Button
+        android:text="Horse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa2"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa3"
+        android:layout_alignStart="@+id/btnalternativa3" />
+
+    <Button
+        android:text="Cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa3"
+        android:onClick="onClick"
+        android:layout_above="@+id/btnalternativa4"
+        android:layout_alignStart="@+id/btnalternativa4" />
+
+    <Button
+        android:text="Monkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnalternativa4"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+
+
+</RelativeLayout>
