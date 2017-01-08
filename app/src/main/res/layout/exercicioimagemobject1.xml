@@ -50,32 +50,32 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa5"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa6"
-        android:layout_alignStart="@+id/btnalternativa6" />
+        android:layout_above="@+id/btnalternativa2"
+        android:layout_alignStart="@+id/btnalternativa2" />
 
     <Button
         android:text="Television"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa6"
+        android:id="@+id/btnalternativa2"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa7"
-        android:layout_alignStart="@+id/btnalternativa7" />
+        android:layout_above="@+id/btnalternativa3"
+        android:layout_alignStart="@+id/btnalternativa3" />
 
     <Button
         android:text="Monitor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa7"
+        android:id="@+id/btnalternativa3"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa8"
-        android:layout_alignStart="@+id/btnalternativa8" />
+        android:layout_above="@+id/btnalternativa4"
+        android:layout_alignStart="@+id/btnalternativa4" />
 
     <Button
         android:text="Microwave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa8"
+        android:id="@+id/btnalternativa4"
         android:onClick="onClick"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

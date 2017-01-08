@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +16,9 @@ import aplicativoIdiomas.Quiz.SelecaoExercicio;
 import br.com.aulateste1e2.codetcc.R;
 
 public class ExercicioAnimalImagem3 extends Activity implements View.OnClickListener{
-    private String questao;
+    private Button errada1;
+    private Button errada2;
+    private Button errada3;
     private Button resposta;
     private int erros = 0;
     private ContagemRegressiva timer;
@@ -30,6 +31,12 @@ public class ExercicioAnimalImagem3 extends Activity implements View.OnClickList
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
         ControleExercicios.finalizaExercicios(this);
+        //Encontra os botões de alternativa por ID
+        resposta = (Button) findViewById(R.id.btnalternativa4);
+        errada1 = (Button) findViewById(R.id.btnalternativa1);
+        errada2 = (Button) findViewById(R.id.btnalternativa2);
+        errada3 = (Button) findViewById(R.id.btnalternativa3);
+
 
     }
     /*Determina o início do tempo limite para o fim do exercício*/
@@ -64,18 +71,18 @@ public class ExercicioAnimalImagem3 extends Activity implements View.OnClickList
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnalternativa8) {
+            if (view.getId() == R.id.btnalternativa4) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);
                 }else{
                     ControleExercicios.incrementaPontosJogador(10);
                 }
-
+                resposta.setEnabled(false);
                 ControleExercicios.incrementaQtdAcertos(1);
                 //Cria os objetos de acesso
                 //questao = (ImageView) findViewById(R.id.questaoimg1);
-                resposta = (Button) findViewById(R.id.btnalternativa8);
+               /* resposta = (Button) findViewById(R.id.btnalternativa4);
 
                 //Cria o objeto para acesso ao BD
                 BancoController crud = new BancoController(getBaseContext());
@@ -84,7 +91,7 @@ public class ExercicioAnimalImagem3 extends Activity implements View.OnClickList
                 int respostaInteger = resposta.getId();
                 //Inserção no BD questão e resposta
                 crud.insereRespostaCerta(questao, respostaInteger);
-
+                */
                 //Cria a variável para a caixa de texto de reposta correta
                 final Dialog dialog = new Dialog(this);
                 dialog.setContentView(R.layout.dialog);
@@ -106,6 +113,18 @@ public class ExercicioAnimalImagem3 extends Activity implements View.OnClickList
 
             } else {
                 //Caso a resposta seja errada
+                switch(view.getId())
+                {
+                    case R.id.btnalternativa1:
+                        errada1.setEnabled(false);
+                        break;
+                    case R.id.btnalternativa2:
+                        errada2.setEnabled(false);
+                        break;
+                    case R.id.btnalternativa3:
+                        errada3.setEnabled(false);
+                        break;
+                }
                 ControleExercicios.incrementaQtdErros(1);
                 erros += 1;
                 AlertDialog.Builder dial = new AlertDialog.Builder(this);

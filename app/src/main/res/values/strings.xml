@@ -6,6 +6,30 @@
     <string name="title_activity_exercicio_imagem">ExercicioImagem</string>
     <string name="title_activity_exercicio_texto">ExercicioTexto</string>
     <string name="title_activity_feedback">Feedback</string>
+    <string name="time">00:00</string>
+    <!--Animals-->
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="dolphin">Dolphin</string>
+    <string name="elephant">Elephant</string>
+    <string name="fox">Fox</string>
+    <string name="horse">Horse</string>
+    <string name="lion">Lion</string>
+    <string name="monkey">Monkey</string>
+    <string name="rabbit">Rabbit</string>
+    <string name="tiger">Tiger</string>
+    <string name="wolf">Wolf</string>
+    <string name="zebra">Zebra</string>
+    <!--Objects-->
+    <string name="computer">Computer</string>
+    <string name="eraser">Eraser</string>
+    <string name="microwaves">Microwaves</string>
+    <string name="pen">Pen</string>
+    <string name="pencil">Pencil</string>
+    <string name="pencil_case">Pencil Case</string>
+    <string name="refregerator">Refrigerator</string>
+    <string name="television">Television</string>
+
     <string name="title_activity_exercicio_animal_imagem6">ExercicioAnimalImagem6</string>
     <string name="title_activity_exercicio_animal_imagem7">ExercicioAnimalImagem7</string>
 </resources>

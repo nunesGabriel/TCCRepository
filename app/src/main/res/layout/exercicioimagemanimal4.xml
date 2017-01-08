@@ -29,10 +29,10 @@
         android:id="@+id/tvCountDownTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="#f8fbfb"
         android:gravity="center"
-        android:text="00:00" />
+        android:text="@string/time" />
 
     <!-- Enunciado da questão !-->
     <ImageView
@@ -45,38 +45,42 @@
 
     <!-- botões alternativas !-->
     <Button
-        android:text="Dog"
+        android:text="@string/dog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa5"
+        android:id="@+id/btnalternativa1"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa6"
-        android:layout_alignStart="@+id/btnalternativa6" />
+        android:clickable="true"
+        android:layout_above="@+id/btnalternativa2"
+        android:layout_alignStart="@+id/btnalternativa2" />
 
     <Button
-        android:text="Elephant"
+        android:text="@string/elephant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa6"
+        android:id="@+id/btnalternativa2"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa7"
-        android:layout_alignStart="@+id/btnalternativa7" />
+        android:clickable="true"
+        android:layout_above="@+id/btnalternativa3"
+        android:layout_alignStart="@+id/btnalternativa3" />
 
     <Button
-        android:text="Horse"
+        android:text="@string/horse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa7"
+        android:id="@+id/btnalternativa3"
         android:onClick="onClick"
-        android:layout_above="@+id/btnalternativa8"
-        android:layout_alignStart="@+id/btnalternativa8" />
+        android:clickable="true"
+        android:layout_above="@+id/btnalternativa4"
+        android:layout_alignStart="@+id/btnalternativa4" />
 
     <Button
-        android:text="Zebra"
+        android:text="@string/zebra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnalternativa8"
+        android:id="@+id/btnalternativa4"
         android:onClick="onClick"
+        android:clickable="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />

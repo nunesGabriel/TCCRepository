@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -64,7 +63,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnalternativa6) {
+            if (view.getId() == R.id.btnalternativa2) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);
@@ -75,7 +74,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
                 ControleExercicios.incrementaQtdAcertos(1);
                 //Cria os objetos de acesso
                 //questao = (ImageView) findViewById(R.id.questaoimg1);
-                resposta = (Button) findViewById(R.id.btnalternativa6);
+                resposta = (Button) findViewById(R.id.btnalternativa2);
 
                 //Cria o objeto para acesso ao BD
                 BancoController crud = new BancoController(getBaseContext());
