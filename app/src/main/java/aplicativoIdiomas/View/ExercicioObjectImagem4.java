@@ -1,46 +1,40 @@
 package aplicativoIdiomas.View;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
-
-import aplicativoIdiomas.Banco.BancoController;
 import aplicativoIdiomas.Quiz.ContagemRegressiva;
-import aplicativoIdiomas.Quiz.SelecaoExercicio;
 import aplicativoIdiomas.Quiz.ControleExercicios;
+import aplicativoIdiomas.Quiz.SelecaoExercicio;
 import br.com.aulateste1e2.codetcc.R;
 
-/**
- * Activity referente aos exercicios com texto e imagens para selecionar.
- */
-public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListener {
-    private ImageButton errada1;
-    private ImageButton errada2;
-    private ImageButton errada3;
-    private ImageButton resposta;
+public class ExercicioObjectImagem4 extends AppCompatActivity implements View.OnClickListener{
+    private Button errada1;
+    private Button errada2;
+    private Button errada3;
+    private Button resposta;
     private int erros = 0;
     private ContagemRegressiva timer;
 
-    public void onCreate(Bundle savedInstanceState){
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exerciciotextoanimal1);
-
+        setContentView(R.layout.exercicioimagemobject4);
         //incrimenta contador de exercícios
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
         ControleExercicios.finalizaExercicios(this);
         //Encontra os botões de alternativa por ID
-        resposta = (ImageButton) findViewById(R.id.btnimg1);
-        errada1 = (ImageButton) findViewById(R.id.btnimg2);
-        errada2 = (ImageButton) findViewById(R.id.btnimg3);
-        errada3 = (ImageButton) findViewById(R.id.btnimg4);
+        resposta = (Button) findViewById(R.id.btnalternativa2);
+        errada1 = (Button) findViewById(R.id.btnalternativa1);
+        errada2 = (Button) findViewById(R.id.btnalternativa3);
+        errada3 = (Button) findViewById(R.id.btnalternativa4);
     }
 
     /*Determina o início do tempo limite para o fim do exercício*/
@@ -64,7 +58,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
     }
 
     public void retornaMain(View view){
-        Intent intent = new Intent(ExercicioAnimalTexto1.this, MainActivity.class);
+        Intent intent = new Intent(ExercicioObjectImagem4.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
@@ -75,7 +69,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnimg1) {
+            if (view.getId() == R.id.btnalternativa3) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);
@@ -84,17 +78,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
                 }
                 resposta.setEnabled(false);
                 ControleExercicios.incrementaQtdAcertos(1);
-                //Cria os objetos de acesso
-                /*questao = (TextView) findViewById(R.id.questao1);
-                resposta = (ImageButton) findViewById(R.id.btnimg1);
 
-                //Cria o objeto para acesso ao BD
-                BancoController crud = new BancoController(getBaseContext());
-                String questaoString = questao.getText().toString();
-                int respostaInteger = resposta.getId();
-                //Inserção no BD questão e resposta
-                crud.insereRespostaCerta(questaoString, respostaInteger);
-                */
                 //Cria a variável para a caixa de texto de reposta correta
                 final Dialog dialog = new Dialog(this);
                 dialog.setContentView(R.layout.dialog);
@@ -110,7 +94,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
                     public void onClick(View v) {
                         //Seleciona o próximo exercício aleatoriamente
                         SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                        selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioAnimalTexto1.this);
+                        selecaoExercicio.handleSelecaoExercicioObjetos(ExercicioObjectImagem4.this);
                     }
                 });
 
@@ -118,40 +102,40 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
                 //Caso a resposta seja errada
                 switch(view.getId())
                 {
-                    case R.id.btnimg2:
+                    case R.id.btnalternativa1:
                         errada1.setEnabled(false);
                         break;
-                    case R.id.btnimg3:
+                    case R.id.btnalternativa3:
                         errada2.setEnabled(false);
                         break;
-                    case R.id.btnimg4:
+                    case R.id.btnalternativa4:
                         errada3.setEnabled(false);
                         break;
                 }
                 ControleExercicios.incrementaQtdErros(1);
                 erros += 1;
                 AlertDialog.Builder dial = new AlertDialog.Builder(this);
-                dial.setMessage("Incorrect answer \n Try again!!!");
+                dial.setMessage("Incorrect answer Try again!!!");
                 dial.setNeutralButton("Ok", null);
                 dial.show();
             }
         }else {//caso tenha mais de 2 erros
-                final Dialog dialog = new Dialog(this);
-                dialog.setContentView(R.layout.dialog);
-                //Localiza o campo de textview da view e define o texto
-                TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-                text.setText("Sorry try next one!!");
-                dialog.show();
-                Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
-                declineButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //Seleciona o próximo exercício aleatoriamente
-                        SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                        selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioAnimalTexto1.this);
-                    }
-                });
-            }
+            final Dialog dialog = new Dialog(this);
+            dialog.setContentView(R.layout.dialog);
+            //Localiza o campo de textview da view e define o texto
+            TextView text = (TextView) dialog.findViewById(R.id.textDialog);
+            text.setText("Too bad try next one!!");
+            dialog.show();
+            Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
+            declineButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Seleciona o próximo exercício aleatoriamente
+                    SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
+                    selecaoExercicio.handleSelecaoExercicioObjetos(ExercicioObjectImagem4.this);
+                }
+            });
+        }
     }
 }
 

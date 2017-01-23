@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">codeTCC</string>
     <string name="btn_desiste">Quit</string>
-    <string name="btn_voltar">Voltar</string>
+    <string name="btn_finish">Finish</string>
     <string name="title_activity_tema_select">TemaSelect</string>
     <string name="title_activity_exercicio_imagem">ExercicioImagem</string>
     <string name="title_activity_exercicio_texto">ExercicioTexto</string>
     <string name="title_activity_feedback">Feedback</string>
+    <string name="title_correct">Correct</string>
+    <string name="title_wrong">Wrong</string>
+    <string name="title_answers">Answers</string>
     <string name="time">00:00</string>
     <!--Animals-->
     <string name="cat">Cat</string>
@@ -23,13 +26,15 @@
     <!--Objects-->
     <string name="computer">Computer</string>
     <string name="eraser">Eraser</string>
-    <string name="microwaves">Microwaves</string>
+    <string name="microwave">Microwave</string>
+    <string name="monitor">Monitor</string>
     <string name="pen">Pen</string>
     <string name="pencil">Pencil</string>
     <string name="pencil_case">Pencil Case</string>
-    <string name="refregerator">Refrigerator</string>
+    <string name="refrigerator">Refrigerator</string>
     <string name="television">Television</string>
 
     <string name="title_activity_exercicio_animal_imagem6">ExercicioAnimalImagem6</string>
     <string name="title_activity_exercicio_animal_imagem7">ExercicioAnimalImagem7</string>
+    <string name="title_activity_exercicio_object_imagem3">ExercicioObjectImagem3</string>
 </resources>

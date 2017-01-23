@@ -17,10 +17,11 @@ import aplicativoIdiomas.Quiz.ControleExercicios;
 import br.com.aulateste1e2.codetcc.R;
 
 public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnClickListener {
-
-    private TextView questao;
+    private ImageButton errada1;
+    private ImageButton errada2;
+    private ImageButton errada3;
     private ImageButton resposta;
-    int erros = 0;
+    private int erros = 0;
     private ContagemRegressiva timer;
 
     @Override
@@ -32,6 +33,11 @@ public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnC
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
         ControleExercicios.finalizaExercicios(this);
+        //Encontra os botões de alternativa por ID
+        resposta = (ImageButton) findViewById(R.id.btnimg2);
+        errada1 = (ImageButton) findViewById(R.id.btnimg1);
+        errada2 = (ImageButton) findViewById(R.id.btnimg3);
+        errada3 = (ImageButton) findViewById(R.id.btnimg4);
     }
 
     /*Determina o início do tempo limite para o fim do exercício*/
@@ -70,17 +76,18 @@ public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnC
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnimg6) {
+            if (view.getId() == R.id.btnimg2) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);
                 }else{
                     ControleExercicios.incrementaPontosJogador(10);
                 }
+                resposta.setEnabled(false);
                 ControleExercicios.incrementaQtdAcertos(1);
                 //Cria os objetos de acesso
-                questao = (TextView) findViewById(R.id.questao2);
-                resposta = (ImageButton) findViewById(R.id.btnimg6);
+                /*questao = (TextView) findViewById(R.id.questao2);
+                resposta = (ImageButton) findViewById(R.id.btnimg2);
 
                 //Cria o objeto para acesso ao BD
                 BancoController crud = new BancoController(getBaseContext());
@@ -88,7 +95,7 @@ public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnC
                 int respostaInteger = resposta.getId();
                 //Inserção no BD questão e resposta
                 crud.insereRespostaCerta(questaoString, respostaInteger);
-
+                */
                 //Cria a variável para a caixa de texto de reposta correta
                 final Dialog dialog = new Dialog(this);
                 dialog.setContentView(R.layout.dialog);
@@ -110,6 +117,18 @@ public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnC
 
             } else {
                 //Caso a resposta seja errada
+                switch(view.getId())
+                {
+                    case R.id.btnimg1:
+                        errada1.setEnabled(false);
+                        break;
+                    case R.id.btnimg3:
+                        errada2.setEnabled(false);
+                        break;
+                    case R.id.btnimg4:
+                        errada3.setEnabled(false);
+                        break;
+                }
                 ControleExercicios.incrementaQtdErros(1);
                 AlertDialog.Builder dial = new AlertDialog.Builder(this);
                 dial.setMessage("Incorrect answer \n Try again!!!");

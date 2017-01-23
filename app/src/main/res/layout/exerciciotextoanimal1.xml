@@ -24,10 +24,10 @@
         android:id="@+id/tvCountDownTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="#f8fbfb"
         android:gravity="center"
-        android:text="00:00"
+        android:text="@string/time"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
@@ -40,7 +40,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
         android:text="Choose the cat"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#fefefe" />
 
     <ImageButton
@@ -49,6 +49,7 @@
         android:id="@+id/btnimg1"
         android:background="@drawable/cat"
         android:onClick="onClick"
+        android:clickable="true"
         android:layout_below="@+id/questao1"
         android:layout_alignStart="@+id/questao1" />
 
@@ -58,6 +59,7 @@
         android:id="@+id/btnimg2"
         android:background="@drawable/dog"
         android:onClick="onClick"
+        android:clickable="true"
         android:layout_marginEnd="44dp"
         android:layout_below="@+id/questao1"
         android:layout_alignParentEnd="true" />
@@ -68,6 +70,7 @@
         android:id="@+id/btnimg3"
         android:background="@drawable/monkey"
         android:onClick="onClick"
+        android:clickable="true"
         android:layout_marginTop="87dp"
         android:layout_below="@+id/btnimg1"
         android:layout_alignStart="@+id/btnimg1" />
@@ -78,6 +81,7 @@
         android:id="@+id/btnimg4"
         android:background="@drawable/zebra"
         android:onClick="onClick"
+        android:clickable="true"
         android:layout_alignBottom="@+id/btnimg3"
         android:layout_alignEnd="@+id/btnimg2"
         android:layout_marginEnd="14dp" />

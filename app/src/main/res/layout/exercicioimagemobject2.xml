@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/exercicioimagemobject1"
+    android:id="@+id/exercicioimagemobject2"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="aplicativoIdiomas.View.ExercicioObjectImagem1"
+    tools:context="aplicativoIdiomas.View.ExercicioObjectImagem2"
     android:background="@drawable/background_qst">
 
 
@@ -38,14 +38,14 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/television"
+        android:background="@drawable/computer"
         android:id="@+id/questaoimg2"
         android:layout_below="@+id/desiste"
         android:layout_centerHorizontal="true" />
 
     <!-- botões alternativas !-->
     <Button
-        android:text="@string/computer"
+        android:text="@string/refrigerator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa1"
@@ -55,7 +55,7 @@
         android:layout_alignStart="@+id/btnalternativa2" />
 
     <Button
-        android:text="@string/television"
+        android:text="@string/microwave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa2"
@@ -65,7 +65,7 @@
         android:layout_alignStart="@+id/btnalternativa3" />
 
     <Button
-        android:text="@string/monitor"
+        android:text="@string/computer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa3"
@@ -75,7 +75,7 @@
         android:layout_alignStart="@+id/btnalternativa4" />
 
     <Button
-        android:text="@string/microwave"
+        android:text="@string/television"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa4"

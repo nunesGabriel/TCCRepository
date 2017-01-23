@@ -33,10 +33,10 @@ public class PlacarDePontos extends Activity {
         Cursor cursor = crud.carregaPontuacao();
 
         String[] nomeCampos = new String[] {CriaBanco.NOMEJOGADOR, CriaBanco.PONTOS};
-        SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this, R.layout.two_col_rol, cursor,nomeCampos, new int[]{R.id.tvnome,R.id.tvponto},0);
+        //SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this, R.layout.two_col_rol, cursor,nomeCampos, new int[]{R.id.tvnome,R.id.tvponto},0);
        // ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,  android.R.layout.simple_expandable_list_item_1, nomeCampos);
         lista = (ListView) findViewById(R.id.id_placarpontos_listview);
-        lista.setAdapter(adaptador);
+        //lista.setAdapter(adaptador);
     }
     //retorna MainActivity
     public void retornaMain(View View){

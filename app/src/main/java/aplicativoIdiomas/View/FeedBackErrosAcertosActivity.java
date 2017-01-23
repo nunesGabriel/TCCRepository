@@ -17,7 +17,6 @@ public class FeedBackErrosAcertosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feedback_erros_acertos_view);
 
-        /*incluir aqui*/
         TextView certasTV = (TextView) findViewById(R.id.qtdAcerto);
         TextView erradasTV = (TextView) findViewById(R.id.qtdErro);
 

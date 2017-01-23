@@ -16,6 +16,9 @@ import aplicativoIdiomas.View.ExercicioAnimalImagem8;
 import aplicativoIdiomas.View.ExercicioAnimalTexto2;
 import aplicativoIdiomas.View.ExercicioAnimalTexto1;
 import aplicativoIdiomas.View.ExercicioObjectImagem1;
+import aplicativoIdiomas.View.ExercicioObjectImagem2;
+import aplicativoIdiomas.View.ExercicioObjectImagem3;
+import aplicativoIdiomas.View.ExercicioObjectImagem4;
 import br.com.aulateste1e2.codetcc.R;
 
 /**
@@ -25,10 +28,12 @@ import br.com.aulateste1e2.codetcc.R;
  */
 public class SelecaoExercicio {
    private Intent intent;
-  public int[] layoutsAnimais = {R.id.exercicioanimalimagem1};//para teste
-  /* public int[] layoutsAnimais = {R.id.exercicioanimaltexto2,R.id.exercicioanimaltexto1,R.id.exercicioanimalimagem1, R.id.exercicioanimalimagem2, R.id.exercicioanimalimagem3, R.id.exercicioanimalimagem4, R.id.exercicioanimalimagem5,
-                                  R.id.exercicioanimalimagem6, R.id.exercicioanimalimagem7, R.id.exercicioanimalimagem8};*/
-   private int[] layoutsObjetos = {R.id.exercicioobjectimagem1};
+   public int[] layoutsAnimais = {R.id.exercicioanimalimagem1,R.id.exercicioanimaltexto2,R.id.exercicioanimaltexto1,
+                                  R.id.exercicioanimalimagem2, R.id.exercicioanimalimagem3, R.id.exercicioanimalimagem4,
+                                  R.id.exercicioanimalimagem5, R.id.exercicioanimalimagem6, R.id.exercicioanimalimagem7,
+                                  R.id.exercicioanimalimagem8};
+   private int[] layoutsObjetos = {R.id.exercicioimagemobject1, R.id.exercicioimagemobject2,R.id.exercicioimagemobject3,
+                                   R.id.exercicioimagemobject4};
 
 
     //seleciona os exercicios com animais
@@ -109,9 +114,30 @@ public class SelecaoExercicio {
     }
     public void handleSelecaoExercicioObjetos (Context context){
         switch (layoutsObjetos[new Random().nextInt(layoutsObjetos.length)]){
-            case R.id.exercicioobjectimagem1:
+            case R.id.exercicioimagemobject1:
 
                 intent = new Intent(context, ExercicioObjectImagem1.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                context.startActivity(intent);
+                break;
+
+            case R.id.exercicioimagemobject2:
+
+                intent = new Intent(context, ExercicioObjectImagem2.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                context.startActivity(intent);
+
+
+            case R.id.exercicioimagemobject3:
+
+                intent = new Intent(context, ExercicioObjectImagem3.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                context.startActivity(intent);
+                break;
+
+            case R.id.exercicioimagemobject4:
+
+                intent = new Intent(context, ExercicioObjectImagem4.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 context.startActivity(intent);
                 break;

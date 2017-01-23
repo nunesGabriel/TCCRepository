@@ -49,6 +49,12 @@ import android.widget.Button;
  * http://stackoverflow.com/questions/5000787/how-to-finish-current-activity-in-android
  * bloquear click de button
  * http://stackoverflow.com/questions/4384890/how-to-disable-an-android-button
+ * Gerar imagens aleatoriamente da pasta drawable
+ * http://stackoverflow.com/questions/15545753/random-genaration-of-image-from-drawable-folder-in-android
+ * identificar botão clicado:
+ * http://stackoverflow.com/questions/15732307/how-to-tell-which-button-was-clicked-in-onclick
+ * Armazenar IDs do R.drawable no array XML
+ * http://stackoverflow.com/questions/6945678/storing-r-drawable-ids-in-xml-array
  * */
 
     public class MainActivity extends Activity implements View.OnClickListener {

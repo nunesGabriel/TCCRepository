@@ -30,7 +30,6 @@ public class ExercicioAnimalImagem8 extends Activity implements View.OnClickList
         //incrimenta contador de exercícios
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
-        ControleExercicios.finalizaExercicios(this);
         resposta = (Button) findViewById(R.id.btnalternativa4);
         errada1 = (Button) findViewById(R.id.btnalternativa1);
         errada2 = (Button) findViewById(R.id.btnalternativa2);

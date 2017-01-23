@@ -31,6 +31,11 @@ public class ExercicioAnimalImagem6 extends Activity implements View.OnClickList
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
         ControleExercicios.finalizaExercicios(this);
+        //Encontra os botões de alternativa por ID
+        resposta = (Button) findViewById(R.id.btnalternativa4);
+        errada1 = (Button) findViewById(R.id.btnalternativa1);
+        errada2 = (Button) findViewById(R.id.btnalternativa2);
+        errada3 = (Button) findViewById(R.id.btnalternativa3);
 
     }
     /*Determina o início do tempo limite para o fim do exercício*/
@@ -59,10 +64,6 @@ public class ExercicioAnimalImagem6 extends Activity implements View.OnClickList
         startActivity(intent);
 
         ControleExercicios.setTodosOsContadoresZero();
-        resposta = (Button) findViewById(R.id.btnalternativa4);
-        errada1 = (Button) findViewById(R.id.btnalternativa1);
-        errada2 = (Button) findViewById(R.id.btnalternativa2);
-        errada3 = (Button) findViewById(R.id.btnalternativa3);
     }
 
     @Override

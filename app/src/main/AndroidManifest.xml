@@ -1,10 +1,12 @@
-<?xml version="1.1" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.aulateste1e2.codetcc">
 
     <uses-sdk android:minSdkVersion="21" />
 
-
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -41,39 +43,56 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="aplicativoIdiomas.View.MainActivity" />
         </activity>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto2"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.PlacarDePontos"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.PontuacaoActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.FeedBackActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem1"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem2"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem3"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem4"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem5"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem6"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.FeedBackErrosAcertosActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem1"
-                  android:screenOrientation="portrait"/>
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalTexto2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.PlacarDePontos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.PontuacaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem5"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem6"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.FeedBackErrosAcertosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioObjectImagem1"
+            android:screenOrientation="portrait" />
         <activity
             android:name="aplicativoIdiomas.View.ExercicioAnimalImagem7"
             android:label="@string/title_activity_exercicio_animal_imagem7"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalImagem8"
-                  android:screenOrientation="portrait"/>
-
-
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioAnimalImagem8"
+            android:screenOrientation="portrait" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem2" />
+        <activity
+            android:name="aplicativoIdiomas.View.ExercicioObjectImagem3"
+            android:label="@string/title_activity_exercicio_object_imagem3"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem4"></activity>
     </application>
 
 </manifest>
