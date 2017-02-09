@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/exercicioimagemobject3"
+    android:id="@+id/exercicioimagemobject7"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,8 +9,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="aplicativoIdiomas.View.ExercicioObjectImagem3"
+    tools:context="aplicativoIdiomas.View.ExercicioObjectImagem7"
     android:background="@drawable/background_qst">
+
+
 
     <Button
         android:layout_width="wrap_content"
@@ -36,8 +38,8 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/eraser"
-        android:id="@+id/questaoimg3"
+        android:background="@drawable/pencil_case"
+        android:id="@+id/questaoimg7"
         android:layout_below="@+id/desiste"
         android:layout_centerHorizontal="true" />
 
@@ -53,7 +55,7 @@
         android:layout_alignStart="@+id/btnalternativa2" />
 
     <Button
-        android:text="@string/pen"
+        android:text="@string/microwave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa2"
@@ -63,7 +65,7 @@
         android:layout_alignStart="@+id/btnalternativa3" />
 
     <Button
-        android:text="@string/pencil"
+        android:text="@string/pen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa3"
@@ -73,7 +75,7 @@
         android:layout_alignStart="@+id/btnalternativa4" />
 
     <Button
-        android:text="@string/eraser"
+        android:text="@string/pencil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa4"

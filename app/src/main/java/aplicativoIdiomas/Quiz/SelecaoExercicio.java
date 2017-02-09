@@ -28,7 +28,7 @@ import br.com.aulateste1e2.codetcc.R;
  */
 public class SelecaoExercicio {
    private Intent intent;
-   public int[] layoutsAnimais = {R.id.exercicioanimalimagem1,R.id.exercicioanimaltexto2,R.id.exercicioanimaltexto1,
+   private int[] layoutsAnimais = {R.id.exercicioanimalimagem1,R.id.exercicioanimaltexto2,R.id.exercicioanimaltexto1,
                                   R.id.exercicioanimalimagem2, R.id.exercicioanimalimagem3, R.id.exercicioanimalimagem4,
                                   R.id.exercicioanimalimagem5, R.id.exercicioanimalimagem6, R.id.exercicioanimalimagem7,
                                   R.id.exercicioanimalimagem8};

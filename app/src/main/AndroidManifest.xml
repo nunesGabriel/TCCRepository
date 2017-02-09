@@ -92,7 +92,18 @@
             android:name="aplicativoIdiomas.View.ExercicioObjectImagem3"
             android:label="@string/title_activity_exercicio_object_imagem3"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem4"></activity>
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem4" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto1" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto3" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto4" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto5" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto6" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto7" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioAnimalTexto8" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem5" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem6" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem7" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem8"></activity>
     </application>
 
 </manifest>

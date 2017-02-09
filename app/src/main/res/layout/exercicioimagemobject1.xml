@@ -39,7 +39,7 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/television"
-        android:id="@+id/questaoimg2"
+        android:id="@+id/questaoimg1"
         android:layout_below="@+id/desiste"
         android:layout_centerHorizontal="true" />
 
