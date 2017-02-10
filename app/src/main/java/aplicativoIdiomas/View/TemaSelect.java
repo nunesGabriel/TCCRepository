@@ -1,17 +1,12 @@
 package aplicativoIdiomas.View;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Random;
-
 import aplicativoIdiomas.Quiz.SelecaoExercicio;
-import aplicativoIdiomas.View.ExercicioAnimalTexto1;
-import aplicativoIdiomas.View.ExercicioAnimalTexto2;
 import br.com.aulateste1e2.codetcc.R;
 
 /**
@@ -24,7 +19,7 @@ public class TemaSelect extends Activity implements View.OnClickListener{
     private Intent intent;
 
 
-    public int[] layouts = {R.id.exercicioanimaltexto2,R.id.exercicioanimaltexto1};
+    public int[] layouts = {R.id.exerciciotextoanimal2,R.id.exerciciotextoanimal1};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

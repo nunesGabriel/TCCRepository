@@ -13,15 +13,17 @@ import java.util.Calendar;
 //http://www.thiengo.com.br/contagem-regressiva-no-android-com-countdowntimer
 public class ContagemRegressiva extends CountDownTimer{
     private Context context;
+    private int codigoDeTema;//1 - animais; 2 - objetos
     private TextView tv;
     private long timeInFuture;
     private SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
 
 
-    public ContagemRegressiva(Context context,TextView tv,long timeInFuture, long interval) {
+    public ContagemRegressiva(Context context,TextView tv,long timeInFuture, long interval, int codigoDeTema) {
         super(timeInFuture, interval);
         this.context = context;
         this.tv = tv;
+        this.codigoDeTema = codigoDeTema;
     }
 
     @Override
@@ -35,8 +37,16 @@ public class ContagemRegressiva extends CountDownTimer{
     public void onFinish() {
         timeInFuture -= 1000;
         tv.setText(getCorretcTimer(true, timeInFuture)+":"+getCorretcTimer(false, timeInFuture));
+
         //Alterna para o próximo layout de exercícios
-        selecaoExercicio.handleSelecaoExercicioAnimais(context);
+        switch (codigoDeTema) {
+
+            case 1: //para animais
+            selecaoExercicio.handleSelecaoExercicioAnimais(context);
+
+            case 2:
+            selecaoExercicio.handleSelecaoExercicioObjetos(context);
+        }
     }
 
     private String getCorretcTimer(boolean isMinute, long millisUntilFinished){

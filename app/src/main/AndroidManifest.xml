@@ -103,7 +103,14 @@
         <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem5" />
         <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem6" />
         <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem7" />
-        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem8"></activity>
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectImagem8" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto2" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto3" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto4" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto5" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto6" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto7" />
+        <activity android:name="aplicativoIdiomas.View.ExercicioObjectTexto8"></activity>
     </application>
 
 </manifest>

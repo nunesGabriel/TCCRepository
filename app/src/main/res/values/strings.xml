@@ -26,12 +26,17 @@
     <!--Objects-->
     <string name="computer">Computer</string>
     <string name="eraser">Eraser</string>
+    <string name="glue">Glue</string>
     <string name="microwave">Microwave</string>
     <string name="monitor">Monitor</string>
+    <string name="notebook">Notebook</string>
     <string name="pen">Pen</string>
     <string name="pencil">Pencil</string>
     <string name="pencil_case">Pencil Case</string>
+    <string name="pencil_sharpener">Pencil sharpener</string>
     <string name="refrigerator">Refrigerator</string>
+    <string name="ruler">Ruler</string>
+    <string name="scissor">Scissor</string>
     <string name="television">Television</string>
 
     <string name="title_activity_exercicio_animal_imagem6">ExercicioAnimalImagem6</string>

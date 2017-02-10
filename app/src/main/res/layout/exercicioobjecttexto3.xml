@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/exercicioobjecttexto1"
+    android:id="@+id/exercicioobjecttexto3"
     android:orientation = "vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="aplicativoIdiomas.View.ExercicioObjectTexto1"
+    tools:context="aplicativoIdiomas.View.ExercicioObjectTexto3"
     android:background="@drawable/background_qst">
 
     <Button
@@ -38,11 +38,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="120dp"
-        android:id="@+id/questao1"
+        android:id="@+id/questao3"
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the microwave"
+        android:text="Choose the ruler"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -50,28 +50,28 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/btnimg1"
-        android:background="@drawable/computer"
+        android:background="@drawable/eraser"
         android:onClick="onClick"
         android:clickable="true"
-        android:layout_below="@+id/questao1"
-        android:layout_alignStart="@+id/questao1" />
+        android:layout_below="@+id/questao3"
+        android:layout_alignStart="@+id/questao3" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/btnimg2"
-        android:background="@drawable/eraser"
+        android:background="@drawable/ruler"
         android:onClick="onClick"
         android:clickable="true"
         android:layout_marginEnd="44dp"
-        android:layout_below="@+id/questao1"
+        android:layout_below="@+id/questao3"
         android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/btnimg3"
-        android:background="@drawable/refrigerator"
+        android:background="@drawable/pencil"
         android:onClick="onClick"
         android:clickable="true"
         android:layout_marginTop="87dp"
@@ -82,7 +82,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/btnimg4"
-        android:background="@drawable/microwaves"
+        android:background="@drawable/scissor"
         android:onClick="onClick"
         android:clickable="true"
         android:layout_alignBottom="@+id/btnimg3"
@@ -91,3 +91,4 @@
 
 
 </RelativeLayout>
+

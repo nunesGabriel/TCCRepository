@@ -1,9 +1,9 @@
 package aplicativoIdiomas.View;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +15,7 @@ import aplicativoIdiomas.Quiz.ControleExercicios;
 import aplicativoIdiomas.Quiz.SelecaoExercicio;
 import br.com.aulateste1e2.codetcc.R;
 
-public class ExercicioObjectTexto1 extends AppCompatActivity implements View.OnClickListener{
+public class ExercicioObjectTexto1 extends Activity implements View.OnClickListener{
     private ImageButton errada1;
     private ImageButton errada2;
     private ImageButton errada3;
@@ -45,7 +45,7 @@ public class ExercicioObjectTexto1 extends AppCompatActivity implements View.OnC
         super.onResume();
 
         TextView tv = (TextView) findViewById(R.id.tvCountDownTimer);
-        timer = new ContagemRegressiva(this, tv, 10*1000, 1000);
+        timer = new ContagemRegressiva(this, tv, 10*1000, 1000,2);
         timer.start();
 
     }

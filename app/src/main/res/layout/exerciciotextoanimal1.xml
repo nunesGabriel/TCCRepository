@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/exercicioanimaltexto1"
+    android:id="@+id/exerciciotextoanimal1"
     tools:context="aplicativoIdiomas.View.ExercicioAnimalTexto2"
     android:background="@drawable/background_qst">
 
@@ -34,7 +34,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="120dp"
-        android:id="@+id/questao1"
+        android:id="@+id/questao2"
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
@@ -49,8 +49,8 @@
         android:background="@drawable/cat"
         android:onClick="onClick"
         android:clickable="true"
-        android:layout_below="@+id/questao1"
-        android:layout_alignStart="@+id/questao1" />
+        android:layout_below="@+id/questao2"
+        android:layout_alignStart="@+id/questao2" />
 
     <ImageButton
         android:layout_width="100dp"
@@ -60,7 +60,7 @@
         android:onClick="onClick"
         android:clickable="true"
         android:layout_marginEnd="44dp"
-        android:layout_below="@+id/questao1"
+        android:layout_below="@+id/questao2"
         android:layout_alignParentEnd="true" />
 
     <ImageButton

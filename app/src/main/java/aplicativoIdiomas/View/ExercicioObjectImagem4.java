@@ -43,7 +43,7 @@ public class ExercicioObjectImagem4 extends AppCompatActivity implements View.On
         super.onResume();
 
         TextView tv = (TextView) findViewById(R.id.tvCountDownTimer);
-        timer = new ContagemRegressiva(this, tv, 10*1000, 1000);
+        timer = new ContagemRegressiva(this, tv, 10*1000, 1000,2);
         timer.start();
 
     }
@@ -69,7 +69,7 @@ public class ExercicioObjectImagem4 extends AppCompatActivity implements View.On
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnalternativa3) {
+            if (view.getId() == R.id.btnalternativa2) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);

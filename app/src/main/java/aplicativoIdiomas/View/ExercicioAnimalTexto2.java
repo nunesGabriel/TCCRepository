@@ -46,7 +46,7 @@ public class ExercicioAnimalTexto2 extends AppCompatActivity implements View.OnC
         super.onResume();
 
         TextView tv = (TextView) findViewById(R.id.tvCountDownTimer);
-        timer = new ContagemRegressiva(this, tv, 10*1000, 1000);
+        timer = new ContagemRegressiva(this, tv, 10*1000, 1000,1);
         timer.start();
 
     }

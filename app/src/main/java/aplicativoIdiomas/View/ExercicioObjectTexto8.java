@@ -7,37 +7,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import aplicativoIdiomas.Banco.BancoController;
 import aplicativoIdiomas.Quiz.ContagemRegressiva;
 import aplicativoIdiomas.Quiz.ControleExercicios;
 import aplicativoIdiomas.Quiz.SelecaoExercicio;
 import br.com.aulateste1e2.codetcc.R;
 
-public class ExercicioObjectImagem1 extends Activity implements View.OnClickListener{
-    private Button errada1;
-    private Button errada2;
-    private Button errada3;
-    private Button resposta;
+public class ExercicioObjectTexto8 extends Activity implements View.OnClickListener{
+    private ImageButton errada1;
+    private ImageButton errada2;
+    private ImageButton errada3;
+    private ImageButton resposta;
     private int erros = 0;
     private ContagemRegressiva timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercicioimagemobject1);
+        setContentView(R.layout.exercicioobjecttexto8);
         //incrimenta contador de exercícios
         ControleExercicios.incrementaSequenciaExercicio();
         //verifica se atingiu 10 exercicícios
         ControleExercicios.finalizaExercicios(this);
         //Encontra os botões de alternativa por ID
-        resposta = (Button) findViewById(R.id.btnalternativa2);
-        errada1 = (Button) findViewById(R.id.btnalternativa1);
-        errada2 = (Button) findViewById(R.id.btnalternativa3);
-        errada3 = (Button) findViewById(R.id.btnalternativa4);
-
+        resposta = (ImageButton) findViewById(R.id.btnimg4);
+        errada1 = (ImageButton) findViewById(R.id.btnimg1);
+        errada2 = (ImageButton) findViewById(R.id.btnimg2);
+        errada3 = (ImageButton) findViewById(R.id.btnimg3);
     }
+
     /*Determina o início do tempo limite para o fim do exercício*/
     @Override
     public void onResume(){
@@ -59,7 +59,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
     }
 
     public void retornaMain(View view){
-        Intent intent = new Intent(ExercicioObjectImagem1.this, MainActivity.class);
+        Intent intent = new Intent(ExercicioObjectTexto8.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
@@ -70,7 +70,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
     public void onClick(View view) {
         if(erros < ControleExercicios.qtdErros) {
             //caso a resposta seja a correta
-            if (view.getId() == R.id.btnalternativa2) {
+            if (view.getId() == R.id.btnimg4) {
                 //Trata pontuação do jogador
                 if(erros == 1){
                     ControleExercicios.incrementaPontosJogador(5);
@@ -79,17 +79,6 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
                 }
                 resposta.setEnabled(false);
                 ControleExercicios.incrementaQtdAcertos(1);
-                //Cria os objetos de acesso
-                //questao = (ImageView) findViewById(R.id.questaoimg1);
-                /*resposta = (Button) findViewById(R.id.btnalternativa2);
-
-                //Cria o objeto para acesso ao BD
-                BancoController crud = new BancoController(getBaseContext());
-                //String questaoString = questao.getText().toString();
-                questao = "television";
-                int respostaInteger = resposta.getId();
-                //Inserção no BD questão e resposta
-                crud.insereRespostaCerta(questao, respostaInteger);*/
 
                 //Cria a variável para a caixa de texto de reposta correta
                 final Dialog dialog = new Dialog(this);
@@ -106,7 +95,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
                     public void onClick(View v) {
                         //Seleciona o próximo exercício aleatoriamente
                         SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                        selecaoExercicio.handleSelecaoExercicioObjetos(ExercicioObjectImagem1.this);
+                        selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioObjectTexto8.this);
                     }
                 });
 
@@ -114,20 +103,20 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
                 //Caso a resposta seja errada
                 switch(view.getId())
                 {
-                    case R.id.btnalternativa1:
+                    case R.id.btnimg1:
                         errada1.setEnabled(false);
                         break;
-                    case R.id.btnalternativa3:
+                    case R.id.btnimg2:
                         errada2.setEnabled(false);
                         break;
-                    case R.id.btnalternativa4:
+                    case R.id.btnimg3:
                         errada3.setEnabled(false);
                         break;
                 }
                 ControleExercicios.incrementaQtdErros(1);
                 erros += 1;
                 AlertDialog.Builder dial = new AlertDialog.Builder(this);
-                dial.setMessage("Incorrect answer Try again!!!");
+                dial.setMessage("Incorrect answer \n Try again!!!");
                 dial.setNeutralButton("Ok", null);
                 dial.show();
             }
@@ -136,7 +125,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
             dialog.setContentView(R.layout.dialog);
             //Localiza o campo de textview da view e define o texto
             TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-            text.setText("Too bad try next one!!");
+            text.setText("Sorry try next one!!");
             dialog.show();
             Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
             declineButton.setOnClickListener(new View.OnClickListener() {
@@ -144,7 +133,7 @@ public class ExercicioObjectImagem1 extends Activity implements View.OnClickList
                 public void onClick(View v) {
                     //Seleciona o próximo exercício aleatoriamente
                     SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                    selecaoExercicio.handleSelecaoExercicioObjetos(ExercicioObjectImagem1.this);
+                    selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioObjectTexto8.this);
                 }
             });
         }
