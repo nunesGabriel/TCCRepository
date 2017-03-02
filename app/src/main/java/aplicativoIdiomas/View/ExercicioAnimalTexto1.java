@@ -1,4 +1,4 @@
-package aplicativoIdiomas.View;
+package aplicativoIdiomas.view;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,10 +11,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-import aplicativoIdiomas.Banco.BancoController;
-import aplicativoIdiomas.Quiz.ContagemRegressiva;
-import aplicativoIdiomas.Quiz.SelecaoExercicio;
-import aplicativoIdiomas.Quiz.ControleExercicios;
+import aplicativoIdiomas.quiz.ContagemRegressiva;
+import aplicativoIdiomas.quiz.SelecaoExercicio;
+import aplicativoIdiomas.quiz.ControleExercicios;
 import br.com.aulateste1e2.codetcc.R;
 
 /**
@@ -73,7 +72,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(erros < ControleExercicios.qtdErros) {
+
             //caso a resposta seja a correta
             if (view.getId() == R.id.btnimg1) {
                 //Trata pontuação do jogador
@@ -100,7 +99,7 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
                 dialog.setContentView(R.layout.dialog);
                 //Localiza o campo de textview da view e define o texto
                 TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-                text.setText("Congratulations!! You are right!!");
+                text.setText(getText(R.string.goodmessage1));
 
                 dialog.show();
                 //Cria o objeto de acesso ao botão da msg
@@ -135,23 +134,24 @@ public class ExercicioAnimalTexto1 extends Activity implements View.OnClickListe
                 dial.setNeutralButton("Ok", null);
                 dial.show();
             }
-        }else {//caso tenha mais de 2 erros
-                final Dialog dialog = new Dialog(this);
-                dialog.setContentView(R.layout.dialog);
-                //Localiza o campo de textview da view e define o texto
-                TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-                text.setText("Sorry try next one!!");
-                dialog.show();
-                Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
-                declineButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //Seleciona o próximo exercício aleatoriamente
-                        SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                        selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioAnimalTexto1.this);
-                    }
-                });
-            }
+        if(erros >= ControleExercicios.qtdErros) {
+            //caso tenha mais de 2 erros
+            final Dialog dialog = new Dialog(this);
+            dialog.setContentView(R.layout.dialog);
+            //Localiza o campo de textview da view e define o texto
+            TextView text = (TextView) dialog.findViewById(R.id.textDialog);
+            text.setText(getText(R.string.badmessage1));
+            dialog.show();
+            Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
+            declineButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Seleciona o próximo exercício aleatoriamente
+                    SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
+                    selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioAnimalTexto1.this);
+                }
+            });
+        }
     }
 }
 

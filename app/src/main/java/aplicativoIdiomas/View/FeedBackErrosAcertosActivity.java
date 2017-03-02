@@ -1,15 +1,15 @@
-package aplicativoIdiomas.View;
+package aplicativoIdiomas.view;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import aplicativoIdiomas.Quiz.ControleExercicios;
+import aplicativoIdiomas.quiz.ControleExercicios;
 import br.com.aulateste1e2.codetcc.R;
 
-public class FeedBackErrosAcertosActivity extends AppCompatActivity {
+public class FeedBackErrosAcertosActivity extends Activity {
 
 
     @Override
@@ -22,6 +22,7 @@ public class FeedBackErrosAcertosActivity extends AppCompatActivity {
 
         certasTV.setText("" + ControleExercicios.getCountAcertos());
         erradasTV.setText("" + ControleExercicios.getCountErros());
+
 
         ControleExercicios.setCountAcertos(0);
         ControleExercicios.setCountErros(0);

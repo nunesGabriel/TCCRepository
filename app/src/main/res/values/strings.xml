@@ -2,14 +2,25 @@
     <string name="app_name">codeTCC</string>
     <string name="btn_desiste">Quit</string>
     <string name="btn_finish">Finish</string>
+    <string name="animals">Animals</string>
+    <string name="objects">Objects</string>
     <string name="title_activity_tema_select">TemaSelect</string>
     <string name="title_activity_exercicio_imagem">ExercicioImagem</string>
     <string name="title_activity_exercicio_texto">ExercicioTexto</string>
     <string name="title_activity_feedback">Feedback</string>
+    <string name="back">Back</string>
     <string name="title_correct">Correct</string>
     <string name="title_wrong">Wrong</string>
     <string name="title_answers">Answers</string>
     <string name="time">00:00</string>
+    <string name="advance">Advance</string>
+    <string name="Default_points">00</string>
+    <string name="goodmessage1">Congratulations! You are right!</string>
+    <string name="goodmessage2">Fantastic!! Correct!!</string>
+    <string name="badmessage1">Sorry try next one!</string>
+    <string name="startquiz">Iniciar quiz</string>
+    <string name="pontosfeed">Pontos feed</string>
+    <string name="placar">Placar de pontuação"</string>
     <!--Animals-->
     <string name="cat">Cat</string>
     <string name="dog">Dog</string>

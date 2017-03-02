@@ -1,9 +1,9 @@
-package aplicativoIdiomas.Quiz;
+package aplicativoIdiomas.quiz;
 
 import android.content.Context;
 import android.content.Intent;
 
-import aplicativoIdiomas.View.PontuacaoActivity;
+import aplicativoIdiomas.view.PontuacaoActivity;
 
 /**
  * Classe responsável pela quantidade de exercícios a serem executados, quantidade de erros permitidos  e pontos do jogador
@@ -36,7 +36,7 @@ public final class ControleExercicios {
     public static void incrementaQtdAcertos(int incremento){
         ControleExercicios.countAcertos += incremento;
     }
-
+    //incrementa a quantidade de erros total do jogador
     public static void incrementaQtdErros(int incremento){
         ControleExercicios.countErros += incremento;
     }

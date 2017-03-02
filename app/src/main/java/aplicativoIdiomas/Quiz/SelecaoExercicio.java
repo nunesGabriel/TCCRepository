@@ -1,34 +1,34 @@
-package aplicativoIdiomas.Quiz;
+package aplicativoIdiomas.quiz;
 
 import android.content.Context;
 import android.content.Intent;
 
 import java.util.Random;
 
-import aplicativoIdiomas.View.ExercicioAnimalImagem1;
-import aplicativoIdiomas.View.ExercicioAnimalImagem2;
-import aplicativoIdiomas.View.ExercicioAnimalImagem3;
-import aplicativoIdiomas.View.ExercicioAnimalImagem4;
-import aplicativoIdiomas.View.ExercicioAnimalImagem5;
-import aplicativoIdiomas.View.ExercicioAnimalImagem6;
-import aplicativoIdiomas.View.ExercicioAnimalImagem7;
-import aplicativoIdiomas.View.ExercicioAnimalImagem8;
-import aplicativoIdiomas.View.ExercicioAnimalTexto2;
-import aplicativoIdiomas.View.ExercicioAnimalTexto1;
-import aplicativoIdiomas.View.ExercicioAnimalTexto3;
-import aplicativoIdiomas.View.ExercicioAnimalTexto4;
-import aplicativoIdiomas.View.ExercicioAnimalTexto5;
-import aplicativoIdiomas.View.ExercicioAnimalTexto6;
-import aplicativoIdiomas.View.ExercicioAnimalTexto7;
-import aplicativoIdiomas.View.ExercicioAnimalTexto8;
-import aplicativoIdiomas.View.ExercicioObjectImagem1;
-import aplicativoIdiomas.View.ExercicioObjectImagem2;
-import aplicativoIdiomas.View.ExercicioObjectImagem3;
-import aplicativoIdiomas.View.ExercicioObjectImagem4;
-import aplicativoIdiomas.View.ExercicioObjectImagem5;
-import aplicativoIdiomas.View.ExercicioObjectImagem6;
-import aplicativoIdiomas.View.ExercicioObjectImagem7;
-import aplicativoIdiomas.View.ExercicioObjectImagem8;
+import aplicativoIdiomas.view.ExercicioAnimalImagem1;
+import aplicativoIdiomas.view.ExercicioAnimalImagem2;
+import aplicativoIdiomas.view.ExercicioAnimalImagem3;
+import aplicativoIdiomas.view.ExercicioAnimalImagem4;
+import aplicativoIdiomas.view.ExercicioAnimalImagem5;
+import aplicativoIdiomas.view.ExercicioAnimalImagem6;
+import aplicativoIdiomas.view.ExercicioAnimalImagem7;
+import aplicativoIdiomas.view.ExercicioAnimalImagem8;
+import aplicativoIdiomas.view.ExercicioAnimalTexto2;
+import aplicativoIdiomas.view.ExercicioAnimalTexto1;
+import aplicativoIdiomas.view.ExercicioAnimalTexto3;
+import aplicativoIdiomas.view.ExercicioAnimalTexto4;
+import aplicativoIdiomas.view.ExercicioAnimalTexto5;
+import aplicativoIdiomas.view.ExercicioAnimalTexto6;
+import aplicativoIdiomas.view.ExercicioAnimalTexto7;
+import aplicativoIdiomas.view.ExercicioAnimalTexto8;
+import aplicativoIdiomas.view.ExercicioObjectImagem1;
+import aplicativoIdiomas.view.ExercicioObjectImagem2;
+import aplicativoIdiomas.view.ExercicioObjectImagem3;
+import aplicativoIdiomas.view.ExercicioObjectImagem4;
+import aplicativoIdiomas.view.ExercicioObjectImagem5;
+import aplicativoIdiomas.view.ExercicioObjectImagem6;
+import aplicativoIdiomas.view.ExercicioObjectImagem7;
+import aplicativoIdiomas.view.ExercicioObjectImagem8;
 import br.com.aulateste1e2.codetcc.R;
 
 /**
@@ -38,12 +38,15 @@ import br.com.aulateste1e2.codetcc.R;
  */
 public class SelecaoExercicio {
    private Intent intent;
+
    private int[] layoutsAnimais = {R.id.exercicioanimalimagem1, R.id.exercicioanimalimagem2, R.id.exercicioanimalimagem3,
                                   R.id.exercicioanimalimagem4,R.id.exercicioanimalimagem5, R.id.exercicioanimalimagem6,
                                   R.id.exercicioanimalimagem7,R.id.exercicioanimalimagem8,
                                   R.id.exerciciotextoanimal1,R.id.exerciciotextoanimal2,R.id.exerciciotextoanimal3,
                                   R.id.exerciciotextoanimal4,R.id.exerciciotextoanimal5,R.id.exerciciotextoanimal6,
                                   R.id.exerciciotextoanimal7,R.id.exerciciotextoanimal8};
+
+   //private int[] layoutsAnimais = {R.id.exercicioanimalimagem1};
 
    private int[] layoutsObjetos = {R.id.exercicioimagemobject1, R.id.exercicioimagemobject2,R.id.exercicioimagemobject3,
                                    R.id.exercicioimagemobject4,R.id.exercicioimagemobject5,R.id.exercicioimagemobject6,

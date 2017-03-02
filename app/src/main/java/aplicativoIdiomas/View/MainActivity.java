@@ -1,4 +1,4 @@
-package aplicativoIdiomas.View;
+package aplicativoIdiomas.view;
 
 import android.app.Activity;
 import android.content.Intent;

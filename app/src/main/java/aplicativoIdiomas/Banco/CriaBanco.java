@@ -1,4 +1,4 @@
-package aplicativoIdiomas.Banco;
+package aplicativoIdiomas.banco;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,10 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by GABRIEL on 29/09/2016.
+ * teste de criação de banco de dados
  */
 
 public class CriaBanco extends SQLiteOpenHelper {
-    //Nome do Banco de dados
+    //Nome do banco de dados
     private static String NOME_BANCO = "quiz.db";
     //Dados para a tabela de respostas do quiz
     public static final String TABELARESPOSTAS = "respostas";

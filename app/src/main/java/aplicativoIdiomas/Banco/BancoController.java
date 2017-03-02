@@ -1,4 +1,4 @@
-package aplicativoIdiomas.Banco;
+package aplicativoIdiomas.banco;
 
 import android.content.ContentValues;
 import android.content.Context;

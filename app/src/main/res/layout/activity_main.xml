@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aplicativoIdiomas.View.MainActivity"
+    tools:context="aplicativoIdiomas.view.MainActivity"
+    tools:ignore="ContentDescription"
     android:background="@drawable/background_lamps00">
 
     <ImageView
@@ -21,7 +21,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar quiz"
+        android:text="@string/startquiz"
         android:onClick="onClick"
         android:id="@+id/tema"
         android:layout_centerVertical="true"
@@ -31,7 +31,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Placar de pontuação"
+        android:text="@string/placar"
         android:onClick="onClick"
         android:id="@+id/placar"
         android:layout_below="@+id/tema"
@@ -41,7 +41,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pontos feed"
+        android:text="@string/pontosfeed"
         android:id="@+id/btn_pontos_teste"
         android:onClick="onClick"
         android:layout_marginTop="38dp"

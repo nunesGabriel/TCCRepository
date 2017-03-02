@@ -1,4 +1,4 @@
-package aplicativoIdiomas.View;
+package aplicativoIdiomas.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import aplicativoIdiomas.Quiz.SelecaoExercicio;
+import aplicativoIdiomas.quiz.SelecaoExercicio;
 import br.com.aulateste1e2.codetcc.R;
 
-/**
- * Created by GABRIEL on 24/10/2016.
- */
+
 public class TemaSelect extends Activity implements View.OnClickListener{
     private Button retornaMain;
     private Button objetos;

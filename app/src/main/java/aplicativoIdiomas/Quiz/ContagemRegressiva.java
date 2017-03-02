@@ -1,4 +1,4 @@
-package aplicativoIdiomas.Quiz;
+package aplicativoIdiomas.quiz;
 
 import android.content.Context;
 import android.os.CountDownTimer;
@@ -13,7 +13,7 @@ import java.util.Calendar;
 //http://www.thiengo.com.br/contagem-regressiva-no-android-com-countdowntimer
 public class ContagemRegressiva extends CountDownTimer{
     private Context context;
-    private int codigoDeTema;//1 - animais; 2 - objetos
+    private int codigoDeTema;//1 - animais; 2 - objetos indica qual o tema do exercício para direcionar ao método de seleção de layout de exercício correto, quando o tempo finalizar.
     private TextView tv;
     private long timeInFuture;
     private SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
