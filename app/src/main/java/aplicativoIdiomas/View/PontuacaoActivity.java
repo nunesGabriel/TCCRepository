@@ -12,18 +12,19 @@ import aplicativoIdiomas.quiz.ControleExercicios;
 import br.com.aulateste1e2.codetcc.R;
 
 public class PontuacaoActivity extends Activity implements View.OnClickListener{
-    private Button btnAdvance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pontuacaoview);
         TextView pontos = (TextView) findViewById(R.id.pontuacaoTotal);
-        pontos.setText("" + ControleExercicios.getPontosJogador());
+        //pontos.setText("" + ControleExercicios.getPontosJogador());
+        pontos.setText(String.valueOf(ControleExercicios.getPontosJogador()));
 
     }
             @Override
             public void onClick(View v){
+                Button btnAdvance;
                 btnAdvance = (Button) findViewById(R.id.advance);
                 btnAdvance.setOnClickListener(new View.OnClickListener(){
 

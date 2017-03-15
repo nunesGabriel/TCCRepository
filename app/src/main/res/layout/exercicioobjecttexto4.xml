@@ -43,7 +43,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the pencil sharpener"
+        android:text="@string/exercicioobjecttexto4"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -73,7 +73,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg3"
         android:background="@drawable/pencil_sharpener"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_marginTop="87dp"
         android:layout_below="@+id/btnimg1"

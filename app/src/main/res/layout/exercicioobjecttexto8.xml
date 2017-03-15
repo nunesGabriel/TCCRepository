@@ -43,7 +43,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the notebook"
+        android:text="@string/exercicioobjecttexto8"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -84,7 +84,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg4"
         android:background="@drawable/notebook"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_alignBottom="@+id/btnimg3"
         android:layout_alignEnd="@+id/btnimg2"

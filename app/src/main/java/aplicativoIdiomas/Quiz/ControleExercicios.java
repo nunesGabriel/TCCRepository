@@ -9,10 +9,10 @@ import aplicativoIdiomas.view.PontuacaoActivity;
  * Classe responsável pela quantidade de exercícios a serem executados, quantidade de erros permitidos  e pontos do jogador
  */
 public final class ControleExercicios {
-    public static int contadorExercicios;// armazena a quantidade de exercicícios
-    public static int pontosJogador; // pontuação do jogador durante o quiz (ao final deve ser armazenada no BD
-    public static int countErros;//auxilia a contagem dos erros
-    public static int countAcertos;//auxilia a contagem dos acertos
+    private static int contadorExercicios;// armazena a quantidade de exercicícios
+    private static int pontosJogador; // pontuação do jogador durante o quiz (ao final deve ser armazenada no BD
+    private static int countErros;//auxilia a contagem dos erros
+    private static int countAcertos;//auxilia a contagem dos acertos
     public static int qtdErros = 2;//quantidade de erros permitidas por exercício
 
 

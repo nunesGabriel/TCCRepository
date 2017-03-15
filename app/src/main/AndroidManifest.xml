@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.aulateste1e2.codetcc">
 
-
-<!-- indicam erro, mas não afetam a execução
+    <!--
+     indicam erro, mas não afetam a execução
     <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
--->
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon_quiz"
@@ -104,7 +104,9 @@
         <activity android:name="aplicativoIdiomas.view.ExercicioObjectTexto5" />
         <activity android:name="aplicativoIdiomas.view.ExercicioObjectTexto6" />
         <activity android:name="aplicativoIdiomas.view.ExercicioObjectTexto7" />
-        <activity android:name="aplicativoIdiomas.view.ExercicioObjectTexto8"/>
+        <activity android:name="aplicativoIdiomas.view.ExercicioObjectTexto8" />
+        <activity android:name="aplicativoIdiomas.view.InstructionsAnimals" />
+        <activity android:name="aplicativoIdiomas.view.InstructionsObjects"></activity>
     </application>
 
 </manifest>

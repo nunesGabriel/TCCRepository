@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa1"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_above="@+id/btnalternativa2"
         android:layout_alignStart="@+id/btnalternativa2" />

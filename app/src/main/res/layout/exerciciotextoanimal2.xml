@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="aplicativoIdiomas.view.ExercicioAnimalTexto2"
     tools:ignore="ContentDescription"
-    android:background="@drawable/background_qst">
+    android:background="@drawable/background_animal">
 
     <!-- Timer-->
     <TextView
@@ -41,7 +41,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the dog"
+        android:text="@string/exerciciotextoanimal2"
         android:textSize="20sp"
         android:textColor="#fefefe"/>
 
@@ -59,7 +59,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg2"
         android:background="@drawable/dog"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:layout_marginEnd="44dp"
         android:layout_below="@+id/questao2"
         android:layout_alignParentEnd="true" />

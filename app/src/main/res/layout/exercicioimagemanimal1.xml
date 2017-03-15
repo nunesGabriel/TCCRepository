@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="aplicativoIdiomas.view.ExercicioAnimalImagem1"
     tools:ignore="ContentDescription"
-    android:background="@drawable/background_qst">
+    android:background="@drawable/backgroundjungle">
 
     <Button
         android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa1"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_above="@+id/btnalternativa2"
         android:layout_alignStart="@+id/btnalternativa2" />

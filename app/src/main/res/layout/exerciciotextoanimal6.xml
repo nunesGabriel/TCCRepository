@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="aplicativoIdiomas.view.ExercicioAnimalTexto6"
     tools:ignore="ContentDescription"
-    android:background="@drawable/background_qst">
+    android:background="@drawable/background_animal">
 
     <Button
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the zebra"
+        android:text="@string/exerciciotextoanimal6"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -62,7 +62,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg2"
         android:background="@drawable/zebra"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_marginEnd="44dp"
         android:layout_below="@+id/questao6"

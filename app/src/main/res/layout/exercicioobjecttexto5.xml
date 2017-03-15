@@ -42,7 +42,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the scissor"
+        android:text="@string/exercicioobjecttexto5"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -51,7 +51,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg1"
         android:background="@drawable/scissor"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_below="@+id/questao5"
         android:layout_alignStart="@+id/questao5" />

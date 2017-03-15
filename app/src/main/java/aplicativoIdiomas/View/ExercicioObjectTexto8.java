@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,8 @@ public class ExercicioObjectTexto8 extends Activity implements View.OnClickListe
     private ImageButton resposta;
     private int erros = 0;
     private ContagemRegressiva timer;
+    private MediaPlayer mp = new MediaPlayer();
+    private SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,37 +71,7 @@ public class ExercicioObjectTexto8 extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-            //caso a resposta seja a correta
-            if (view.getId() == R.id.btnimg4) {
-                //Trata pontuação do jogador
-                if(erros == 1){
-                    ControleExercicios.incrementaPontosJogador(5);
-                }else{
-                    ControleExercicios.incrementaPontosJogador(10);
-                }
-                resposta.setEnabled(false);
-                ControleExercicios.incrementaQtdAcertos(1);
 
-                //Cria a variável para a caixa de texto de reposta correta
-                final Dialog dialog = new Dialog(this);
-                dialog.setContentView(R.layout.dialog);
-                //Localiza o campo de textview da view e define o texto
-                TextView text = (TextView) dialog.findViewById(R.id.textDialog);
-                text.setText(getText(R.string.goodmessage1));
-
-                dialog.show();
-                //Cria o objeto de acesso ao botão da msg
-                Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
-                declineButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //Seleciona o próximo exercício aleatoriamente
-                        SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
-                        selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioObjectTexto8.this);
-                    }
-                });
-
-            } else {
                 //Caso a resposta seja errada
                 switch(view.getId())
                 {
@@ -118,7 +91,7 @@ public class ExercicioObjectTexto8 extends Activity implements View.OnClickListe
                 dial.setMessage("Incorrect answer \n Try again!!!");
                 dial.setNeutralButton("Ok", null);
                 dial.show();
-            }
+
         if(erros >= ControleExercicios.qtdErros) {
             //caso tenha mais de 2 erros
             final Dialog dialog = new Dialog(this);
@@ -132,10 +105,42 @@ public class ExercicioObjectTexto8 extends Activity implements View.OnClickListe
                 @Override
                 public void onClick(View v) {
                     //Seleciona o próximo exercício aleatoriamente
-                    SelecaoExercicio selecaoExercicio = new SelecaoExercicio();
                     selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioObjectTexto8.this);
                 }
             });
         }
+    }
+    public void respostaCerta(View view) {
+        ///sons
+        mp.stop(); //para todos os sons anteriores
+        mp = MediaPlayer.create(this, R.raw.notebook); //Localizando o arquivo
+        mp.start();
+        mp.setLooping(false); //repetir o som
+        //Trata pontuação do jogador
+        if(erros == 1){
+            ControleExercicios.incrementaPontosJogador(5);
+        }else{
+            ControleExercicios.incrementaPontosJogador(10);
+        }
+        resposta.setEnabled(false);
+        ControleExercicios.incrementaQtdAcertos(1);
+
+        //Cria a variável para a caixa de texto de reposta correta
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog);
+        //Localiza o campo de textview da view e define o texto
+        TextView text = (TextView) dialog.findViewById(R.id.textDialog);
+        text.setText(getText(R.string.goodmessage1));
+
+        dialog.show();
+        //Cria o objeto de acesso ao botão da msg
+        Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
+        declineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Seleciona o próximo exercício aleatoriamente
+                selecaoExercicio.handleSelecaoExercicioAnimais(ExercicioObjectTexto8.this);
+            }
+        });
     }
 }

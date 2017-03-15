@@ -20,8 +20,10 @@ public class FeedBackErrosAcertosActivity extends Activity {
         TextView certasTV = (TextView) findViewById(R.id.qtdAcerto);
         TextView erradasTV = (TextView) findViewById(R.id.qtdErro);
 
-        certasTV.setText("" + ControleExercicios.getCountAcertos());
-        erradasTV.setText("" + ControleExercicios.getCountErros());
+       // certasTV.setText("" + ControleExercicios.getCountAcertos());
+        certasTV.setText(String.valueOf(ControleExercicios.getCountAcertos()));
+       // erradasTV.setText("" + ControleExercicios.getCountErros());
+        erradasTV.setText(String.valueOf(ControleExercicios.getCountErros()));
 
 
         ControleExercicios.setCountAcertos(0);

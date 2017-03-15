@@ -50,6 +50,25 @@
     <string name="scissor">Scissor</string>
     <string name="television">Television</string>
 
+    <string name="exercicioobjecttexto1">Choose the microwave</string>
+    <string name="exercicioobjecttexto2">Choose the glue</string>
+    <string name="exercicioobjecttexto3">Choose the ruler</string>
+    <string name="exercicioobjecttexto4">Choose the pencil sharpener</string>
+    <string name="exercicioobjecttexto5">Choose the scissor</string>
+    <string name="exercicioobjecttexto6">Choose the computer</string>
+    <string name="exercicioobjecttexto7">Choose the refrigerator</string>
+    <string name="exercicioobjecttexto8">Choose the notebook</string>
+
+    <string name="exerciciotextoanimal1">Choose the cat</string>
+    <string name="exerciciotextoanimal2">Choose the dog</string>
+    <string name="exerciciotextoanimal3">Choose the monkey</string>
+    <string name="exerciciotextoanimal4">Choose the elephant</string>
+    <string name="exerciciotextoanimal5">Choose the dolphin</string>
+    <string name="exerciciotextoanimal6">Choose the zebra</string>
+    <string name="exerciciotextoanimal7">Choose the lion</string>
+    <string name="exerciciotextoanimal8">Choose the horse</string>
+
+
     <string name="title_activity_exercicio_animal_imagem6">ExercicioAnimalImagem6</string>
     <string name="title_activity_exercicio_animal_imagem7">ExercicioAnimalImagem7</string>
     <string name="title_activity_exercicio_object_imagem3">ExercicioObjectImagem3</string>

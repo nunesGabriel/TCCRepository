@@ -44,7 +44,7 @@ public class ContagemRegressiva extends CountDownTimer{
             case 1: //para animais
             selecaoExercicio.handleSelecaoExercicioAnimais(context);
 
-            case 2:
+            case 2://para objetos
             selecaoExercicio.handleSelecaoExercicioObjetos(context);
         }
     }

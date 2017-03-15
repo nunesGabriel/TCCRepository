@@ -11,7 +11,7 @@
     tools:context="aplicativoIdiomas.view.ExercicioAnimalImagem3"
     tools:ignore="ContentDescription"
     android:id="@+id/exercicioanimalimagem3"
-    android:background="@drawable/background_qst">
+    android:background="@drawable/backgroundjungle">
 
 
 
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnalternativa4"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

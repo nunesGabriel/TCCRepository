@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="aplicativoIdiomas.view.ExercicioAnimalTexto3"
     tools:ignore="ContentDescription"
-    android:background="@drawable/background_qst">
+    android:background="@drawable/background_animal">
 
     <Button
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         android:layout_below="@+id/desiste"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
-        android:text="Choose the monkey"
+        android:text="@string/exerciciotextoanimal3"
         android:textSize="20sp"
         android:textColor="#fefefe" />
 
@@ -84,7 +84,7 @@
         android:layout_height="100dp"
         android:id="@+id/btnimg4"
         android:background="@drawable/monkey"
-        android:onClick="onClick"
+        android:onClick="respostaCerta"
         android:clickable="true"
         android:layout_alignBottom="@+id/btnimg3"
         android:layout_alignEnd="@+id/btnimg2"
